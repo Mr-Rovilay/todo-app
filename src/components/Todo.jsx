@@ -1,12 +1,13 @@
 const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
   return (
     <div className="Todo">
-      <p
+      <div
         onClick={() => toggleComplete(task.id)}
-        className={`${task.completed ? "completed" : ""} capitalize`}
+        className={`${task.completed ? "completed" : ""} capitalize flex gap-4`}
       >
-        {task.task}
-      </p>
+        <input type="checkbox" name="" id="" />
+        <p>{task.task}</p>
+      </div>
       <div className="flex gap-2">
         <div className="border rounded-md p-2 border-dark-green bg-dark-green">
           <i
