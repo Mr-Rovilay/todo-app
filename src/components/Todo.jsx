@@ -1,6 +1,14 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="Todo">
+    <div className="Todo" data-aos="fade-left">
       <div
         onClick={() => toggleComplete(task.id)}
         className={`${task.completed ? "completed" : ""} capitalize flex gap-4`}
