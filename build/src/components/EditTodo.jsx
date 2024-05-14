@@ -20,7 +20,7 @@ const EditTodo = ({ editTodo, task }) => {
         value={value}
         type="text"
         className="todo-input"
-        placeholder="update our task"
+        placeholder="update your task"
         onChange={(e) => setValue(e.target.value)}
       />
       <button type="submit" className="todo-btn">
